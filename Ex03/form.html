@@ -1,0 +1,96 @@
+<html>
+
+	<head>
+		<meta content="text/html; charset = UTF-8" http-equiv="content-type">
+
+		<title>Controle de Usuario</title>
+	</head>
+
+	<script type="text/javascript">
+
+		function confirmarDeleteProduto(id, email, senha) {
+
+			if (confirm('Confirmar a exclusão do usuario [' + email + '] (id ' + id + ') com senha  ' + senha)) {
+				location.href = '/usuario/delete/' + id;
+			}
+		}
+		function onLoad() {
+			if (document.getElementById("msg").value != "") {
+				alert(document.getElementById("msg").value);
+			}
+		}
+	</script>
+
+	<body onload="onLoad()">
+		<h1>Cadastro de Usuario</h1>
+		<input type="hidden" id="msg" name="msg" value="">
+		<UM-USUARIO>
+		<br>
+		<LISTAR-USUARIO>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				background-color: whitesmoke;
+				padding: 20px;
+			}
+
+
+			.input--main__style {
+				background-color: darkgreen;
+			}
+
+			.input--button {
+				font-weight: bold;
+				font-size: 1.2em;
+				color: whitesmoke;
+				margin-top: 20px;
+				cursor: pointer;
+			}
+
+			.input--button:hover{
+				background-color: green;
+				box-shadow:  5px 5px darkgreen;
+				border: none;
+				transform: translateY(-5px);
+				transform: translateX(-5px);
+			}
+
+			.input--button:active{
+				box-shadow:  0px 0px;
+				transform: translateY(+5px);
+				transform: translateX(+5px);
+			}
+
+			.input--register {
+				display: inline;
+			}
+
+			input {
+				display: block;
+				border-radius: 7px;
+				border-style: solid;
+				padding: 10px;
+			}
+
+			form p {
+				text-align: initial;
+				display: inline;
+				margin-left: 15px;
+			}
+
+			.p--nomargin {
+				margin-left: 0px;
+				margin-right: 10px;
+			}
+		</style>
+	</body>
+
+</html>
